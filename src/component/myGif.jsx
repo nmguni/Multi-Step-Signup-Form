@@ -11,8 +11,8 @@ class Giffy extends React.Component {
         <Container>
           <Iframe
             src="https://giphy.com/embed/fxnEiGnEp5uzr67cwE"
-            width="480"
-            height="268"
+            width="400px"
+            height="400px"
             frameBorder="0"
             class="giphy-embed"
             allowFullScreen

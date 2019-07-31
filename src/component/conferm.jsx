@@ -1,8 +1,12 @@
 import React, { Component } from "react";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
-import AppBar from "material-ui/AppBar";
+// import AppBar from "material-ui/AppBar";
 import { List, ListItem } from "material-ui/List";
 import RaiseButton from "material-ui/RaisedButton";
+import Typography from "@material-ui/core/Typography";
+import Toolbar from "@material-ui/core/Toolbar";
+import "../App.css";
+import { Grid } from "@material-ui/core";
 
 export class FormUserDetails extends Component {
   continue = e => {
@@ -17,19 +21,23 @@ export class FormUserDetails extends Component {
   };
   render() {
     const {
-      values: { firstName, lastName, email, occupation, city, bio }
+      values: { Name, occupation, location, race }
     } = this.props;
     return (
       <MuiThemeProvider>
         <React.Fragment>
-          <AppBar titel="Conferm User Data" />
+          <Grid className="background-color" container justify="center">
+            <Toolbar>
+              <Typography className="center" variant="h1">
+                <div className="header-text">Conferm</div>
+              </Typography>
+            </Toolbar>
+          </Grid>
           <List>
-            <ListItem primaryText="First Name" secondaryText={firstName} />
-            <ListItem primaryText="last Name" secondaryText={lastName} />
-            <ListItem primaryText="Email " secondaryText={email} />
+            <ListItem primaryText="Name" secondaryText={Name} />
             <ListItem primaryText="occupation" secondaryText={occupation} />
-            <ListItem primaryText="bio" secondaryText={bio} />
-            <ListItem primaryText="City" secondaryText={city} />
+            <ListItem primaryText="location" secondaryText={location} />
+            <ListItem primaryText="Race" secondaryText={race} />
           </List>
           <br />
           <RaiseButton

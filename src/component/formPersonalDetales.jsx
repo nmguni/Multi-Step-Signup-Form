@@ -1,8 +1,12 @@
 import React, { Component } from "react";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
-import AppBar from "material-ui/AppBar";
+// import AppBar from "material-ui/AppBar";
 import TextField from "material-ui/TextField";
 import RaiseButton from "material-ui/RaisedButton";
+import "../App.css";
+import { Grid } from "@material-ui/core";
+import Typography from "@material-ui/core/Typography";
+import Toolbar from "@material-ui/core/Toolbar";
 
 export class FormPersonalDetails extends Component {
   continue = e => {
@@ -18,7 +22,13 @@ export class FormPersonalDetails extends Component {
     return (
       <MuiThemeProvider>
         <React.Fragment>
-          <AppBar titel="Enter Personal Detales" />
+          <Grid className="background-color" container justify="center">
+            <Toolbar>
+              <Typography className="center" variant="h1">
+                <div className="header-text">Personal details</div>
+              </Typography>
+            </Toolbar>
+          </Grid>
           <TextField
             hintText="Enter Occupation"
             floatingLabelText="Occupation"
@@ -28,16 +38,16 @@ export class FormPersonalDetails extends Component {
           <br />
           <TextField
             hintText="Enter Your City"
-            floatingLabelText="City"
-            onChange={handleChange("cty")}
-            defaultValue={values.city}
+            floatingLabelText="Location"
+            onChange={handleChange("location")}
+            defaultValue={values.location}
           />
           <br />
           <TextField
             hintText="Enter Youe Bio"
-            floatingLabelText="Bio"
-            onChange={handleChange("bio")}
-            defaultValue={values.bio}
+            floatingLabelText="Race"
+            onChange={handleChange("race")}
+            defaultValue={values.race}
           />
           <br />
           <RaiseButton

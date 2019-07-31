@@ -20,8 +20,8 @@ export class FormUserDetails extends Component {
         <React.Fragment>
           <Grid className="background-color" container justify="center">
             <Toolbar>
-              <Typography className="center" variant="h6">
-                <h1 className="header-text">Syain Signup Form</h1>
+              <Typography className="center" variant="h1">
+                <div className="header-text">Saiyan Signup Form</div>
               </Typography>
             </Toolbar>
           </Grid>
@@ -29,28 +29,13 @@ export class FormUserDetails extends Component {
           <div className="field">
             <TextField
               className="formback-ground"
-              hintText="Enter First Name"
-              floatingLabelText="First Name"
-              onChange={handleChange("firstName")}
-              defaultValue={values.firstName}
+              hintText="Name"
+              floatingLabelText="Name"
+              onChange={handleChange("Name")}
+              defaultValue={values.name}
             />
             <br />
-            <TextField
-              hintText="Enter Last Name"
-              floatingLabelText="Last Name"
-              onChange={handleChange("lastName")}
-              defaultValue={values.lastName}
-              variant="filled"
-            />
-            <br />
-            <TextField
-              hintText="Enter email"
-              floatingLabelText="Email"
-              onChange={handleChange("email")}
-              defaultValue={values.email}
-              variant="filled"
-            />
-            <br />
+
             <RaiseButton
               label="Continue"
               primary={true}

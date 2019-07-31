@@ -7,12 +7,10 @@ import Success from "./success";
 export class UserForm extends Component {
   state = {
     step: 1,
-    firstName: "",
-    lastName: "",
-    email: "",
-    occupations: "",
-    city: "",
-    bio: ""
+    Name: "",
+    occupation: "",
+    location: "",
+    race: ""
   };
   // Proceed to the next step
   nextStep = () => {
@@ -38,8 +36,8 @@ export class UserForm extends Component {
   // find what step we are on and decide what component we want to display
   render() {
     const { step } = this.state;
-    const { fistName, lastName, email, occupation, city, bio } = this.state;
-    const values = { fistName, lastName, email, occupation, city, bio };
+    const { Name, occupation, location, race } = this.state;
+    const values = { Name, occupation, location, race };
 
     switch (step) {
       case 1:
